@@ -1,0 +1,5 @@
+-- Write your PostgreSQL query statement below
+SELECT P.product_name,S.YEAR,S.PRICE 
+FROM Sales S
+INNER JOIN Product P
+ON S.product_id = P.product_id
