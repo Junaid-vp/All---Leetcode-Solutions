@@ -22,8 +22,9 @@
  */
 var findTheDifference = function(s, t) {
     
-for(let char of s){
-   t = t.replace(char,"")
+for(let x of s){
+   t = t.replace(x,"")
 }
 return t
+
     }
