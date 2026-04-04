@@ -4,7 +4,7 @@
  */
 var smallestIndex = function(nums) {
 
-  for(i=0;i<nums.length;i++){
+  for(let i=0;i<nums.length;i++){
     let s = nums[i].toString().split("").reduce((a,b)=>Number(a)+Number(b))
     console.log(s,i)
     
