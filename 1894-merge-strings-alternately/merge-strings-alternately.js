@@ -4,10 +4,14 @@
  * @return {string}
  */
 var mergeAlternately = function(word1, word2) {
-    let res = ""
-    for(i=0; i<word1.length || i<word2.length ; i++){
-        if(word1.length > i) res +=word1[i]
-        if(word2.length > i) res +=word2[i]
+    let x = word1.length
+    let y= word2.length
+    let big = Math.max(x,y)
+    let word = big === x ? word1 : word2
+    let res =""
+    for(i=0;i<word.length;i++){
+        res += word1[i] ??""
+        res+= word2[i] ?? ""
     }
     return res
 };
