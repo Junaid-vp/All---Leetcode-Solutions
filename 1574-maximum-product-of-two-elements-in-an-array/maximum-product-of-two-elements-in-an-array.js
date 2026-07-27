@@ -3,11 +3,8 @@
  * @return {number}
  */
 var maxProduct = function(nums) {
-    let res = []
-    for(i=0;i<nums.length;i++){
-        for(j=i+1;j<nums.length;j++){
-            res.push((nums[i]-1)*(nums[j]-1))
-        }
-    }
-    return Math.max(...res)
+    let arr = nums.toSorted((a,b)=>b-a)
+    
+return (nums[(nums.indexOf(arr[0]))] - 1 ) * (nums[(nums.indexOf(arr[1]))] - 1 )
+
 };
